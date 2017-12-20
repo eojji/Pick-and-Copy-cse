@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= include('Stylesheet'); ?>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="handleFormSubmit(this)">
+      <h1>gfolderCopy Sheet</h1>      
+      <p><label>검색: <input name="name" type="text" value="" required minlength=2></label> 2자 이상 입력</p>
+      <p>검색 버튼을 눌러 주세요. <input name="button" type="submit" value="검색" /><p>      
+    </form>        
+    <? url = getUrlSpreadsheet(); ?>
+    <a href="<?!= url ?>">Spreadsheet</a>    
+    <h4>참조: <a href="https://docs.google.com/document/d/1NqvrrOZAN_MjUtzZJlqHUPPd9OXgcl1nxYoB_Sb12lc/edit?usp=sharing">Custom Search</a></h4>    
+    <div id="output">Message: </div>
+    <?!= include('JavaScript'); ?>
+  </body>
+</html>
