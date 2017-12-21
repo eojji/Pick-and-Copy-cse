@@ -6,13 +6,12 @@
   </head>
   <body>
     <form id="myForm" onsubmit="handleFormSubmit(this)">
-      <h1>gfolderCopy Sheet</h1>      
-      <p><label>검색: <input name="name" type="text" value="" required minlength=2></label> 2자 이상 입력</p>
-      <p>검색 버튼을 눌러 주세요. <input name="button" type="submit" value="검색" /><p>      
-    </form>        
-    <? url = getUrlSpreadsheet(); ?>
-    <a href="<?!= url ?>">Spreadsheet</a>    
-    <h4>참조: <a href="https://docs.google.com/document/d/1NqvrrOZAN_MjUtzZJlqHUPPd9OXgcl1nxYoB_Sb12lc/edit?usp=sharing">Custom Search</a></h4>    
+      <h3>gfolder Copy Sheet</h3>      
+      <p><label>Query: <input name="query" type="text" value="" required minlength=2></label> At least 2 characters</p>
+      <p>Click the <input name="button" type="submit" value="Query" /><p>      
+    </form>            
+    <a href="https://drive.google.com/drive/u/0/recent" target="_blank">My Drive</a>    
+    <h4>Document: <a href="https://goo.gl/PUJJQc" target="_blank">Custom Search</a></h4>    
     <div id="output">Message: </div>
     <?!= include('JavaScript'); ?>
   </body>
