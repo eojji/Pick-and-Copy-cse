@@ -18,15 +18,12 @@ window.addEventListener('load', function() {
         google.script.run
         .withSuccessHandler(updateUrl)        
         .processForm(formObject);                        
-        formObject.name.value = '';
-        formObject.contents.value = '';       
-        formObject.email.value = '';               
-        // formObject.button.disabled = true;
+        formObject.query.value = '';
       }
-      function updateUrl(ticket) {
+      function updateUrl(rows) {
         var div = document.getElementById('output');
-        div.innerHTML = 'Message: <br><span style=" font: bold 2em/1em Georgia, serif ; color: red;">' + ticket + ' </span>';
-        div.innerHTML += '<span style=" font: 1.5em/1em Georgia, serif ; color: green;"> 번까지 저장했습니다.</span>';
+        div.innerHTML = 'Message: <br><span style=" font: bold 2em/1em Georgia, serif ; color: red;">' + rows + ' </span>';
+        div.innerHTML += '<span style=" font: 1.5em/1em Georgia, serif ; color: green;"> Rows</span>';
       }
       
 </script>
